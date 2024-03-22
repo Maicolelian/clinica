@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('direccion') }}
-            {{ Form::text('direccion', $paciente->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
+            {{ Form::select('direccion', ['colombia' => 'Colombia', 'mexico' => 'Mexico', 'brazil' => 'Brazil', 'ecuador' => 'Ecuador'],  $paciente->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
             {!! $errors->first('direccion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
